@@ -15,6 +15,8 @@ $time = date('H:i:s');
 $location = 'Office'; // Replace with actual location logic if needed
 $action = '';
 $alert = '';
+$punched_in_today = '';
+$punched_out_today = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Check if punched in today

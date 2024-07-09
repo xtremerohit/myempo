@@ -3,34 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin and Employee Management System</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Home</title>
     <style>
         body, html {
-            height: 100%;
-            margin: 0;
+            font-family: Arial, sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #f8f9fa;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-right: auto;
+            margin-left: auto;
+            gap: 20px;
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
         }
         .card {
-            width: 100%;
-            max-width: 400px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        #card1 {
+            background-color: #007BFF;
+        }
+        #card2 {
+            background-color: #007BFF;
+        }
+        .login-card {
+            background-color: #007BFF;
+            color: hsl(0, 0%, 100%);
+        }
+        .login-card h3 {
+            font-size: 20px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (min-width: 769px) {
+            .container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .center-text {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+        .center-text a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .center-text a:hover {
+            text-decoration: underline;
+        }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .header img {
+            max-width: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
         }
     </style>
 </head>
 <body>
-    <div class="card text-center">
-        <div class="card-body">
-            <h3 class="card-title">Welcome to the Management System</h3>
-            <p class="card-text">Please select your login type:</p>
-            <a href="login.php" class="btn btn-primary btn-block mt-3">Admin Login</a>
-            <a href="empo_login.php" class="btn btn-secondary btn-block mt-3">Employee Login</a>
-        </div>
-        <div class="card-footer">
-            <p>Don't Have an Account? <a href="create_account.php">Create Here</a></p>
-        </div>
+    <div class="header" style="padding-bottom: 33px;">
+        <img src="power.png" alt="Logo">
+        <h1 style="padding-top: 12px;">Welcome To Empo</h1>
     </div>
+    <div class="container">
+        <a href="login.php" class="card login-card" id="card1">
+            <h3>Admin Login</h3>
+        </a>
+        <a href="empo_login.php" class="card login-card" id="card2">
+            <h3>Employee Login</h3>
+        </a>
+    </div>
+    <p class="center-text"  style="padding-top: 33px;">
+        Don't have an account? <a href="create_account.php">Create one</a>
+    </p>
 </body>
 </html>
